@@ -87,7 +87,6 @@ def indeed(terms, city):
     api_response = req.request(
         "POST", indeed_url, json=indeed_payload, headers=indeed_headers)
     parsed = api_response.json()
-    print(parsed)
     api_dict = {}
     id = 0
     for job in parsed:
