@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Search Jobs</h1>
+        <table>
+          <tr>
+            <th>Job Title</th>
+            <th>City</th>
+            <th>Company Name</th>
+            <th>link to job posting</th>
+            <th>Date posted</th>
+            <th>Source</th>
+          </tr>
+          {% for key, value in consolidated_data.items %}
+          <tr>
+            <td>{{ value.job_title }}</td>
+            <td>{{ value.city }}</td>
+            <td>{{ value.company_name }}</td>
+            <td>
+              <a href="{{ value.link }}">Link to posting</a>
+            </td>
+            <td>{{ value.date_posted }}</td>
+            <td>{{ value.source }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="center">
+        <a href="/search/" class="btn btn-primary">Search again</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Database/ Migrations
+db.sqlite3
+*/migrations
+
+# Environments
+.env
+venv/
+
+# Testing .log files
+*.log

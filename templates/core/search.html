@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Jobs</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <h2>Job search page</h2>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Search Jobs</h1>
+        <form action="/search/" method="POST">
+          {% csrf_token %}
+          <table>
+            {{ search_form.as_table }}
+            <tr>
+              <td>
+                <input type="submit" class="btn btn-primary" value="Search" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
