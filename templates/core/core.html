@@ -3,27 +3,49 @@
   <head>
     {% load static %}
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="Job-search, jobs, linkedin, indeed"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Search Aggrigator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     {% include 'bootstrap.html' %}
   </head>
   <body>
     {% include 'nav.html' %}
-    <h2>Welcome to the Job Search Aggrigator</h2>
-    <h5>
-      I created this website as a way to aggregate job postings from my 2 most
-      utilized job hunting websites, LinkedIn and Indeed. This website utilizes
-      the
-      <a href="https://rapidapi.com/jaypat87/api/linkedin-jobs-search">
-        LinkedIn</a
-      >
-      and <a href="https://rapidapi.com/jaypat87/api/indeed11">Indeed</a> API's
-      made available through
-      <a href="https://rapidapi.com/hub">RapidAPI.com</a> to gather job postings
-      based on the (limited) search parameters made available through the API's.
-      This experience was my first time utilizing API's through a django-based
-      web project.
-    </h5>
+    <h2 class="text-center">Welcome to the Job Search Aggrigator</h2>
+    <section>
+      <p class="lead text-center">
+        I created this website as a way to aggregate job postings from my 2 most
+        utilized job hunting websites, LinkedIn and Indeed. This website
+        utilizes the
+        <a
+          href="https://rapidapi.com/jaypat87/api/linkedin-jobs-search"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          LinkedIn</a
+        >
+        and
+        <a
+          href="https://rapidapi.com/jaypat87/api/indeed11"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Indeed</a
+        >
+        API's made available through
+        <a
+          href="https://rapidapi.com/hub"
+          target="_blank"
+          rel="noreferrer noopener"
+          >RapidAPI.com</a
+        >
+        to gather job postings based on the (limited) search parameters made
+        available through the API's. This experience was my introduction to
+        utilizing API's and handling their responses, as well as data
+        manipulation.
+      </p>
+    </section>
   </body>
 </html>
