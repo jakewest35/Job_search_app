@@ -29,7 +29,12 @@
             <td>{{ value.city }}</td>
             <td>{{ value.company_name }}</td>
             <td>
-              <a href="{{ value.link }}">Link to posting</a>
+              <a
+                href="{{ value.link }}"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Link to posting</a
+              >
             </td>
             <td>{{ value.date_posted }}</td>
             <td>{{ value.source }}</td>
