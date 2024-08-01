@@ -11,3 +11,4 @@ venv/
 
 # Testing .log files
 *.log
+.DS_Store
